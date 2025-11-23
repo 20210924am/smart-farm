@@ -4,7 +4,7 @@ import './menu.css';
 function Menu() {
   return (
     <div className="menu-container">
-      <h1>🌿 스마트팜 메뉴</h1>
+      <h1>🌿 메인 메뉴</h1>
       <div className="menu-grid">
         <button className="menu-card">📊 실시간 모니터링</button>
         <button className="menu-card">🎮 원격 제어</button>
