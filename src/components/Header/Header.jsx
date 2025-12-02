@@ -3,13 +3,15 @@ import './Header.css';
 import RefreshLogo from '../../assets/Refresh_Logo.png';
 import { FaBars } from 'react-icons/fa';
 
-const [isOpen, setIsOpen] = useState(flase);
+function Header() {
+
+const [isOpen, setIsOpen] = useState(false);
 const toggleMenu =() =>{
 setIsOpen(!isOpen)
 }
 
 
-function Header() {
+
   return (
     <header>
     <nav className="navbar">
@@ -22,7 +24,7 @@ function Header() {
       <div className="navbar-toggle" onClick={toggleMenu}>
         <FaBars/>
       </div>
-      <div className={`navbar-menu $is{Open ? 'active' : ''}`}>
+      <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
         <ul>
         <li><a href="#">HOME</a></li>
         <li><a href="#">DASHBOARD</a></li>

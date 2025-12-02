@@ -1,10 +1,20 @@
-import React from 'react';
-import './Menu.css';
+import React from 'react'
 
-function Menu() {
+const Menu = () => {
   return (
-    <div className="menu-container"></div>
-  );
+    <div className="menu-dashboard">
+<section className='menu-left'>
+  <div className="profile-card">
+    <div className="plant-img-box">
+      <div className="img-placeholder">
+        <h2> 장미 </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </div>
+  )
 }
 
 export default Menu;
