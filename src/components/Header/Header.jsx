@@ -10,8 +10,6 @@ const toggleMenu =() =>{
 setIsOpen(!isOpen)
 }
 
-
-
   return (
     <header>
     <nav className="navbar">
@@ -27,7 +25,8 @@ setIsOpen(!isOpen)
       <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
         <ul>
         <li><a href="#">HOME</a></li>
-        <li><a href="#">DASHBOARD</a></li>
+        <li><a href="#">MY PLANT</a></li>
+        <li><a href="#">COMMUNITY</a></li>
         <li><a href="#">SETTINGS</a></li>
         <li><a href="#">LOGOUT</a></li>
         </ul>

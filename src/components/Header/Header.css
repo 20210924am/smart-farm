@@ -1,5 +1,5 @@
 .navbar{
-    background-color: black;
+    background-color: #A1BC98;
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -59,7 +59,9 @@ font-weight: bold;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #222;
+            background-color: #D2DCB6;
+;
+
         text-align: center;
         padding: 20px 0;
         z-index: 10;
