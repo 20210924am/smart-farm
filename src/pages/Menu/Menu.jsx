@@ -12,7 +12,7 @@ function Menu() {
     light: 800
   });
 
-  const [isAutoMode, SetIsAutoMode] =useState(true);
+  const [isAutoMode, setIsAutoMode] =useState(true);
 
   const [plantProfile] =useState({
     name: "장미",

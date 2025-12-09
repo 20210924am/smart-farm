@@ -2,19 +2,30 @@ import React, { useState } from 'react';
 import './Header.css';
 import RefreshLogo from '../../assets/Refresh_Logo.png';
 import { FaBars } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
 const [isOpen, setIsOpen] = useState(false);
 const toggleMenu =() =>{
-setIsOpen(!isOpen)
+setIsOpen(!isOpen);
+}
+
+const handleRefresh = (e) =>{
+  e.preventDefault();
+  window.location.href = '/menu';
+}
+
+const handleLogout = (e) =>{
+  e.preventDefault();
+  window.location.href = '/login';
 }
 
   return (
     <header>
     <nav className="navbar">
       <div className='nav-logo'>
-      <a href='#'>
+      <a href='/' onClick={handleRefresh}>
         <img src={RefreshLogo} alt="Refresh_Logo" className="logo-img"/>
         Refresh
         </a>
@@ -24,11 +35,11 @@ setIsOpen(!isOpen)
       </div>
       <div className={`navbar-menu ${isOpen ? 'active' : ''}`}>
         <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">MY PLANT</a></li>
-        <li><a href="#">COMMUNITY</a></li>
-        <li><a href="#">SETTINGS</a></li>
-        <li><a href="#">LOGOUT</a></li>
+        <li><Link to="/menu" onClick={handleRefresh}>HOME</Link></li>
+        <li><Link to="#">MY PLANT</Link></li>
+        <li><Link to="#">COMMUNITY</Link></li>
+        <li><Link to="#">SETTINGS</Link></li>
+        <li><Link to="/login" onClick={(handleLogout)}>LOGOUT</Link></li>
         </ul>
       </div>
     </nav>
